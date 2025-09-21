@@ -1,3 +1,11 @@
+body{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     padding-bottom: 1000px;
+}
+
 header{
      background-color:  rgb(20, 94, 20);
      width: 100%;
@@ -13,7 +21,7 @@ nav{
      background:inherit;
      display: flex;
      padding: 20px;
-     height: 80px;
+     height: 4em;
      border-radius: 5px;
      width: 100%;
 }
@@ -31,7 +39,7 @@ nav ul a{
      padding: 10px;
      border-radius: 5px;
      margin: 10;
-     transition: background 0.05s;
+     transition: all 0.05s;
 }
 nav img{
      width: 180px;
@@ -121,4 +129,204 @@ color: #f1f1f1;
      margin-left: 3em;
      }
      
+}
+
+main{
+     position: relative;
+     top: 3.5em;
+     margin: 1em 0 0 0;
+}
+
+.hero-section{
+     width: 100%;
+     height: 38em;
+}
+.hero-section .background{
+     background-image: url(imgs/img1.jpg);
+     background-size: cover;
+     background-position: center;
+     filter: blur(3px);
+     height: 100%;
+}
+.hero-section .intro{
+     position: absolute;
+     top: 20%;
+     left: 20%;
+     width: 60%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.hero-section .intro h2{
+     color: rgb(67, 245, 67);
+     font-size: clamp(1rem, 4vw, 3rem);
+     padding: 0;
+     margin-bottom: .5em;
+}
+.hero-section .intro p{
+     color: white;
+     font-size: clamp(.8rem, 1.4vw, 3rem);
+     text-align: center;
+     margin: 0;
+     margin-bottom: 1em;
+}
+.hero-section .intro button{
+     padding: .7em .6em .7em .6em;
+     border: none;
+     height: 3em;
+     border-radius: 10px;
+     background-color: rgb(81, 245, 81);
+     text-align: center;
+     transition: all ease-in-out .5s;
+}
+.hero-section .intro button:hover{
+     background-color: rgba(81, 245, 81, 0.5);
+     transform: scale(1.4);
+}
+.hero-section .intro button:active{
+     opacity: .5;
+     transform: scale(1.2);
+}
+
+.research-section{
+     position: absolute;
+     left: 10%;
+     right: 10%;
+     margin-top: 2em;
+     box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #fff;
+     border: none;
+     border-radius: 20px;
+
+}
+.research-section .research-intro{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 1em;
+}
+.research-section .research-intro h3{
+     font-size: clamp(.9rem, 3vw, 2.5rem);
+}
+.research-section .research-intro p{
+     font-size: clamp(.8rem, 1.4vw, 3rem);
+     text-align: center;
+     padding: .7em;
+}
+.research-about{
+     display: flex;
+     flex-direction: column;
+     margin-top: 1em;
+}
+.research-about .category{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     width: 100%;
+}
+.research-about .category .div{
+     width: 40%;
+}
+.research-about .category .div img{
+     width: 40px;
+     margin-bottom: 0;
+}
+.research-about .category .div h4{
+     margin: 0;
+     font-size: clamp(.9rem, 1.5vw, 2.5rem);
+}
+.research-about .category .div p{
+     color: rgb(95, 95, 95);
+     font-size: clamp(.8rem, 1.4vw, 3rem);
+     text-align: justify;
+}
+
+.member-section{
+     position: absolute;
+     top: 85em;
+     left: 10%;
+     right: 10%;
+}
+.member-section .members{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+}
+.member-section .members h3{
+     font-size: clamp(.9rem, 3vw, 2.5rem);
+}
+.member-section .members .profile{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     width: 100%;
+}
+.member-section .members .profile .profile-card{
+     box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #fff;
+     border-radius: 20px;
+     padding: 1em;
+     width: auto;
+     height: 9em;
+     margin-bottom: 1em;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.member-section .members .profile .profile-card img{
+     width: 4em;
+     height: 4em;
+     border-radius: 50%;
+}
+.member-section .members .profile .profile-card h5{
+     font-size: clamp(.8rem, 1.1vw, 3rem);
+     margin: .5em
+     ; padding: .5em;
+}
+.member-section .members .profile .profile-card p{
+     font-size: clamp(1rem, 1.2vw, 3rem);
+     color: gray;
+     padding: .5em; margin: .5em;
+}
+.member-section .archievement{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     margin-top: 3em;
+}
+.member-section .archievement .amount{
+     font-size: clamp(1rem, 2vw, 3rem);
+     color: green;
+     font-weight: bold;
+     margin: 0; padding: 0;
+}
+.member-section .archievement p{
+     color: gray;
+     font-size: clamp(1rem, 1.7vw, 3rem);
+}
+
+.featured-project{
+     position: absolute;
+     top: 135em;
+     right: 10%;
+     left: 10%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+.featured-project .project{
+     width: 30%;
+}
+.featured-project .project img{
+     width: 20em;
+     border: none;
+     border-radius: 20px;
+}
+.featured-project .project h5{
+     font-size: clamp(.8rem, 1.5vw, 3rem);
+}
+.featured-project .project p{
+     font-size: clamp(.8rem, 1.1vw, 3rem);
+     color: gray;
 }
