@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Layout</title>
+    <link rel="stylesheet" href="flexGrid.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            background-color: #208a2e;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        .profile-photo {
+            width: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .username {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            transition: all .5s ease;
+        }
+        .menu ul li a:hover{
+            color: rgb(75, 219, 255);
+        }
+
+        .main-content {
+            padding: 20px;
+            background-color: rgb(171, 208, 250);
+            border-radius: 8px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 8px;
+            flex-grow: 1;
+            text-align: center;
+            text-align: justify;
+            font-size: clamp(1rem, 1.3vw, 1.7rem);
+            transition: transform 0.3s ease;
+            transform: scale(1); 
+
+        }
+        .card h3{
+            text-decoration: none;
+        }
+        .card:hover{
+            transform: scale(1.07);
+        }
+
+
+        @media (max-width: 768px) {
+            .menu ul{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+            .menu ul li{
+                margin-right: 1em;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="sidebar">
+            <img src="img/foa-logo.svg" alt="Profile Photo" class="profile-photo">
+            <p class="username">Eger News</p>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Breaking News</a></li>
+                    <li><a href="#">Sports</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+        <main class="main-content">
+            <h1>Latests</h1>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Tech</h3>
+                    Graphics duties are handled by the Adreno 810 GPU. While the listing doesn’t explicitly name the processor, the core
+                    configuration and GPU pairing point directly to the Snapdragon 7s Gen 4, which Qualcomm announced in August
+                </div>
+                <div class="card">
+                    <h3>News</h3>
+                    Graphics duties are handled by the Adreno 810 GPU. While the listing doesn’t explicitly name the processor, the core
+                    configuration and GPU pairing point directly to the Snapdragon 7s Gen 4, which Qualcomm announced in August
+                </div>
+                <div class="card">
+                    <h3>Business</h3>
+                    Graphics duties are handled by the Adreno 810 GPU. While the listing doesn’t explicitly name the processor, the core
+                    configuration and GPU pairing point directly to the Snapdragon 7s Gen 4, which Qualcomm announced in August
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
