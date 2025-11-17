@@ -327,6 +327,11 @@ main{
      font-size: clamp(.8rem, 1.5vw, 3rem);
 }
 .featured-project .project p{
-     font-size: clamp(.8rem, 1.1vw, 3rem);
+     /* font-size: clamp(.8rem, 1.1vw, 3rem); */
      color: gray;
+}
+@media( max: 768px) {
+     .featured-project .project p{
+          font-size: 1000px;
+     }
 }
