@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Clubs - Faculty of Agriculture</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"><img src="images/egertonlogo.png" alt="logo" /></a>
+        <img class="menu-btn" src="img/menu.png" alt="menu" />
+        <div class="title">
+          <h1>Faculty of Agriculture</h1>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Innovations</a></li>
+          <li><a href="#">Staffs</a></li>
+          <li class="student-tab">
+            <a href="#">Students</a>
+            <div class="student-dropdown">
+              <a href="clubs.html">Student Clubs</a>
+              <a href="scholarships.html">Scholarships</a>
+              <a href="research.html">Research Projects</a>
+              <a href="internships.html">Internships</a>
+              <a href="events.html">Events & Competitions</a>
+              <a href="campus.html">Campus Life</a>
+            </div>
+          </li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Authors</a></li>
+        </ul>
+      </nav>
+      <div class="undercolor"></div>
+    </header>
+
+    <main>
+      <section id="clubs" class="section active">
+        <h2>Student Clubs</h2>
+        <p>
+          Clubs are an amazing way to network, gain skills, and share ideas with
+          like-minded students.
+        </p>
+
+        <ul>
+          <li>Agribusiness Club</li>
+          <li>Green Earth Society</li>
+          <li>AgriTech Innovators</li>
+          <li>Debate & Public Speaking Club</li>
+        </ul>
+
+        <div class="club-filter">
+          <label for="clubInterest">Filter by interest:</label>
+          <select id="clubInterest" onchange="filterClubs()">
+            <option value="all">Show all</option>
+            <option value="business">Business & Marketing</option>
+            <option value="environment">Environment & Sustainability</option>
+            <option value="technology">Technology & Innovation</option>
+            <option value="communication">Communication & Leadership</option>
+          </select>
+        </div>
+
+        <div class="clubs-flex-container">
+          <div
+            class="club-card"
+            data-tag="business"
+            id="club-agribusiness-card"
+          >
+            <img src="images/agrobusiness.png" alt="Agribusiness Club" />
+            <div>
+              <span>Business</span>
+              <h3>Agribusiness Club</h3>
+              <p>
+                Learn how to turn farm ideas into profitable ventures through
+                agribusiness training, farm visits, and business pitch events.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="club-card"
+            data-tag="environment"
+            id="club-greenearth-card"
+          >
+            <img src="images/green earth.jpg" alt="Green Earth Society" />
+            <div>
+              <span>Environment</span>
+              <h3>Green Earth Society</h3>
+              <p>
+                Focused on tree planting, campus clean-ups, and climate action
+                campaigns to promote sustainable agriculture.
+              </p>
+            </div>
+          </div>
+
+          <div class="club-card" data-tag="technology" id="club-agritech-card">
+            <img src="images/agrotech.jpg" alt="AgriTech Innovators" />
+            <div>
+              <span>Tech</span>
+              <h3>AgriTech Innovators</h3>
+              <p>
+                A space for coding, building IoT prototypes, and using AI to
+                solve real farm problems such as irrigation and pest control.
+              </p>
+            </div>
+          </div>
+
+          <div class="club-card" data-tag="communication" id="club-debate-card">
+            <img src="images/debate and public speaking.png" alt="Debate & Public Speaking" />
+            <div>
+              <span>Leadership</span>
+              <h3>Debate & Public Speaking Club</h3>
+              <p>
+                Grow your confidence through debates, panel discussions, and
+                presentation clinics centered around food security topics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section id="footer">
+      <footer>
+        <div class="foa-f-identity">
+          <h3>Faculty Of Agriculture</h3>
+          <p class="tagline"><span>Nurturing Minds, Feeding Nations</span></p>
+        </div>
+        <div class="footer-quicklink">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="">Programs</a></li>
+            <li><a href="">Staff Directory</a></li>
+            <li><a href="">Research & Innovations</a></li>
+            <li><a href="">Blogs</a></li>
+            <li><a href="/contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-info">
+          <h3>Contact Info</h3>
+          <ul>
+            <li>536 - Egerton University</li>
+            <br />
+            <li>+254722651888</li>
+            <br />
+            <li>foa@egerton.ac.ke</li>
+          </ul>
+        </div>
+      </footer>
+    </section>
+    <script src="sript.js"></script>
+  </body>
+</html>
