@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty of Agriculture</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style></style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="#" onclick="showSection('home')"><img src="images/egertonlogo.png" alt="logo" /></a>
+        <img class="menu-btn" src="img/menu.png" alt="menu" />
+        <div class="title">
+          <h1>Faculty of Agriculture</h1>
+        </div>
+        <ul>
+          <li><a href="#" onclick="showSection('home')">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Innovations</a></li>
+          <li><a href="#">Staffs</a></li>
+          <li class="student-tab">
+            <a href="#">Students</a>
+            <div class="student-dropdown">
+              <a href="#" onclick="showSection('clubs')">Student Clubs</a>
+              <a href="#" onclick="showSection('scholarships')">Scholarships</a>
+              <a href="#" onclick="showSection('research')">Research Projects</a>
+              <a href="#" onclick="showSection('internships')">Internships</a>
+              <a href="#" onclick="showSection('events')">Events & Competitions</a>
+              <a href="#" onclick="showSection('campus')">Campus Life</a>
+            </div>
+          </li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Authors</a></li>
+        </ul>
+      </nav>
+      <div class="undercolor"></div>
+    </header>
+
+    <main>
+      
+      <!-- Campus Section -->
+      <section id="campus" class="section">
+        <h2>Campus Life </h2>
+        <p>
+          Campus life within the Faculty of Agriculture offers students a dynamic environment
+          filled with learning, growth, and memorable experiences. Whether you're engaging in
+          academic activities, joining student clubs, or participating in cultural events,
+          there's something for everyone.
+        </p>
+
+        <div class="campus-grid">
+          <div class="card">
+            <div class="img-placeholder"><image class="agriculture-expo" src="images/Annual Agriculture Expo.jpg" alt="agriculture-expo">
+            </div>
+            <h3>Annual Agriculture Expo</h3>
+            <p>
+              A vibrant expo where students present projects, innovations, and agricultural
+              demonstrations to the university community and industry visitors.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder" ><image class="Sports & Recreation" image src="images/Sports & Recreation.jpg"></image></div>
+            <h3>Sports & Recreation</h3>
+            <p>
+              Students can join sports teams, fitness clubs, and recreational groups that
+              promote health and teamwork outside the classroom.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder"><image class="Cultural Nights & Talent Shows" image src="images/campus life.webp"></image></div>
+            <h3>Cultural Nights & Talent Shows</h3>
+            <p>
+              An opportunity for students to celebrate diversity and creativity through
+              dances, music, drama, and artistic showcases.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder"><image class="Green Innovation Hackathons" image src="images/Agriculture Hackathon 2025.jpg"></image></div>
+            <h3>Green Innovation Hackathons</h3>
+            <p>
+              Team-based challenges where students develop sustainable solutions for
+              real agricultural and environmental problems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clubs Section -->
+      <section id="clubs" class="section">
+        <h2>Student Clubs</h2>
+        <p>
+          Clubs are an amazing way to network, gain skills, and share ideas with
+          like-minded students.
+        </p>
+
+        <ul>
+          <li>Agribusiness Club</li>
+          <li>Green Earth Society</li>
+          <li>AgriTech Innovators</li>
+          <li>Debate & Public Speaking Club</li>
+        </ul>
+
+        <div class="club-filter">
+          <label for="clubInterest">Filter by interest:</label>
+          <select id="clubInterest" onchange="filterClubs()">
+            <option value="all">Show all</option>
+            <option value="business">Business & Marketing</option>
+            <option value="environment">Environment & Sustainability</option>
+            <option value="technology">Technology & Innovation</option>
+            <option value="communication">Communication & Leadership</option>
+          </select>
+        </div>
+
+        <div class="clubs-flex-container">
+          <div
+            class="club-card"
+            data-tag="business"
+            id="club-agribusiness-card"
+          >
+            <img src="images/agrobusiness.png" alt="Agribusiness Club" />
+            <div>
+              <span>Business</span>
+              <h3>Agribusiness Club</h3>
+              <p>
+                Learn how to turn farm ideas into profitable ventures through
+                agribusiness training, farm visits, and business pitch events.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="club-card"
+            data-tag="environment"
+            id="club-greenearth-card"
+          >
+            <img src="images/green earth.jpg" alt="Green Earth Society" />
+            <div>
+              <span>Environment</span>
+              <h3>Green Earth Society</h3>
+              <p>
+                Focused on tree planting, campus clean-ups, and climate action
+                campaigns to promote sustainable agriculture.
+              </p>
+            </div>
+          </div>
+
+          <div class="club-card" data-tag="technology" id="club-agritech-card">
+            <img src="images/agrotech.jpg" alt="AgriTech Innovators" />
+            <div>
+              <span>Tech</span>
+              <h3>AgriTech Innovators</h3>
+              <p>
+                A space for coding, building IoT prototypes, and using AI to
+                solve real farm problems such as irrigation and pest control.
+              </p>
+            </div>
+          </div>
+
+          <div class="club-card" data-tag="communication" id="club-debate-card">
+            <img src="images/debate and public speaking.png" alt="Debate & Public Speaking" />
+            <div>
+              <span>Leadership</span>
+              <h3>Debate & Public Speaking Club</h3>
+              <p>
+                Grow your confidence through debates, panel discussions, and
+                presentation clinics centered around food security topics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events Section -->
+      <section id="events" class="section">
+        <h2>Events & Competitions </h2>
+        <p>
+          Explore engaging events that connect students with hands-on agricultural innovation,
+          real-world challenges, and vibrant campus experiences.
+        </p>
+        <div class="events-grid">
+          <div class="card">
+            <div class="img-placeholder"><image class="Annual agro expo" image src="images/Annual Agriculture Innovation Fair.jpg"></image></div>
+            <h3>Annual Agriculture Innovation Fair</h3>
+            <p>
+              A showcase of groundbreaking student projects and agricultural technologies.
+              Participants receive mentorship from leading experts.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder"><image class="Student Debate on Sustainable Farming" image src="images/Student Debate on Sustainable Farming.jpg"></image></div>
+            <h3>Student Debate on Sustainable Farming</h3>
+            <p>
+              A competitive debate where students argue innovative environmental and
+              agricultural ideas for future food systems.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder"><image class="Farm-to-Table" image src="images/Farm-to-Table Cooking Competition.jpg"></image></div>
+            <h3>Farm-to-Table Cooking Competition</h3>
+            <p>
+              A fun and educational competition promoting creativity in transforming
+              fresh farm produce into nutritious meals.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder"><image class="agriculture Hackathon" image src="images/Agriculture Hackathon 2025.jpg"></image></div>
+            <h3>Agriculture Hackathon 2025</h3>
+            <p>
+              A 48-hour collaborative event where students design digital solutions for
+              real agricultural challenges.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Internships Section -->
+      <section id="internships" class="section">
+        <h2>Internships</h2>
+        <p>
+          Internships prepare our students for careers in agriculture, research,
+          and innovation.
+        </p>
+
+        <ul>
+          <li>Kenya Agricultural Research Institute – Crop Trials</li>
+          <li>AgriTech Startup – Data Analysis Internship</li>
+          <li>Food Processing Plant – Quality Assurance</li>
+          <li>Ministry of Agriculture – Extension Services</li>
+        </ul>
+
+        <div class="internships-row">
+          <div class="internship-item">
+            <div class="internship-icon"></div>
+            <div>
+              <h3>Research Institute – Crop Trials</h3>
+              <p>
+                Work with senior scientists in field trials, data recording, and
+                reporting on crop performance.
+              </p>
+            </div>
+          </div>
+
+          <div class="internship-item">
+            <div class="internship-icon"></div>
+            <div>
+              <h3>AgriTech Startup – Data & Apps</h3>
+              <p>
+                Help build dashboards, manage farm datasets, and test mobile
+                apps used by farmers.
+              </p>
+            </div>
+          </div>
+
+          <div class="internship-item">
+            <div class="internship-icon"></div>
+            <div>
+              <h3>Food Processing Plant – Quality</h3>
+              <p>
+                Join a quality assurance team to test samples, check standards,
+                and understand food safety workflows.
+              </p>
+            </div>
+          </div>
+
+          <div class="internship-item">
+            <div class="internship-icon"></div>
+            <div>
+              <h3>Ministry – Extension Services</h3>
+              <p>
+                Support extension officers in visiting farmers, training groups,
+                and documenting field challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="internship-tips-btn"
+          onclick="toggleInternshipTips()"
+          id="tipsBtn"
+        >
+          Show Internship Tips
+        </button>
+
+        <div class="internship-tips" id="internshipTips">
+          <strong>Internship application tips:</strong>
+          <ul>
+            <li>
+              Prepare a one-page CV highlighting farm or project experience.
+            </li>
+            <li>
+              Talk about at least one course project when asked about practical
+              skills.
+            </li>
+            <li>
+              Ask your lecturers or club mentors for recommendation letters in
+              advance.
+            </li>
+            <li>
+              After the internship, request a completion letter and keep in
+              touch with your supervisor.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Research Section -->
+      <section id="research" class="section">
+        <h2>Research Projects</h2>
+        <p>
+          Our students actively participate in research that addresses
+          real-world agricultural challenges.
+        </p>
+
+        <ul>
+          <li>Climate-Resilient Crops Initiative</li>
+          <li>Smart Irrigation Systems</li>
+          <li>Organic Fertilizer Development</li>
+          <li>AI for Pest Control</li>
+        </ul>
+
+        <div class="research-grid">
+          <div class="research-card">
+            <img src="images/Climate-Resilient Maize Trial.jpg" alt="Climate Resilient Crops" />
+            <h3>Climate-Resilient Maize Trials</h3>
+            <p class="research-meta">Lead: Dr. Achieng • Location: Nakuru</p>
+            <p>
+              Testing new maize varieties that can withstand irregular rainfall
+              and extended dry spells.
+            </p>
+            <button
+              class="btn-small"
+              onclick="viewResearchDetails('Climate-Resilient Maize Trials')"
+            >
+              View Details
+            </button>
+          </div>
+
+          <div class="research-card">
+            <img src="images/Solar-Powered Smart Irrigation.jpg" alt="Smart irrigation" />
+            <h3>Solar-Powered Smart Irrigation</h3>
+            <p class="research-meta">
+              Lead: Eng. Kiptoo • Location: University Farm
+            </p>
+            <p>
+              Combining solar panels and soil moisture sensing to reduce water
+              wastage in smallholder farms.
+            </p>
+            <button
+              class="btn-small"
+              onclick="viewResearchDetails('Solar-Powered Smart Irrigation')"
+            >
+              View Details
+            </button>
+          </div>
+
+          <div class="research-card">
+            <img src="images/Organic Fertilizer from Waste.jpg" alt="Organic fertilizer" />
+            <h3>Organic Fertilizer from Waste</h3>
+            <p class="research-meta">
+              Lead: Ms. Wanjiru • Location: Bioconversion Lab
+            </p>
+            <p>
+              Converting market waste into safe, nutrient-rich organic
+              fertilizer for local farmers.
+            </p>
+            <button
+              class="btn-small"
+              onclick="viewResearchDetails('Organic Fertilizer from Waste')"
+            >
+              View Details
+            </button>
+          </div>
+
+          <div class="research-card">
+            <img src="images/AI for Pest Detection.jpg" alt="AI pest control" />
+            <h3>AI for Pest Detection</h3>
+            <p class="research-meta">
+              Lead: CS & Agriculture Students • Location: Digital Lab
+            </p>
+            <p>
+              Using computer vision to detect pest damage on leaves and alert
+              farmers through a mobile app.
+            </p>
+            <button
+              class="btn-small"
+              onclick="viewResearchDetails('AI for Pest Detection')"
+            >
+              View Details
+            </button>
+          </div>
+
+          <div class="research-card">
+            <img src="images/Dairy Data Analytics.jpg" alt="Dairy analytics" />
+            <h3>Dairy Data Analytics</h3>
+            <p class="research-meta">
+              Lead: Dairy Unit • Location: Campus Dairy Farm
+            </p>
+            <p>
+              Tracking milk yields and feed efficiency using sensors and
+              dashboards to guide farm decisions.
+            </p>
+            <button
+              class="btn-small"
+              onclick="viewResearchDetails('Dairy Data Analytics')"
+            >
+              View Details
+            </button>
+          </div>
+
+          <div class="research-card">
+            <img src="images/Soil Health Mapping.webp" alt="Soil mapping" />
+            <h3>Soil Health Mapping</h3>
+            <p class="research-meta">
+              Lead: Soil Science Dept. • Location: County Farms
+            </p>
+            <p>
+              Students collect soil samples and use GIS to map nutrient levels
+              across the region.
+            </p>
+            <button
+              class="btn-small"
+              onclick="viewResearchDetails('Soil Health Mapping')"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scholarships Section -->
+      <section id="scholarships" class="section">
+        <h2>Scholarships</h2>
+        <p>
+          Explore top funding opportunities that support students in
+          agricultural sciences, research, innovation, and community
+          development.
+        </p>
+
+        <div class="scholarship-grid">
+          <div class="card">
+            <div class="img-placeholder"><image class="Excellence in Agriculture Scholarship" image src="images/scholarship exallence.jpg"></image>
+              
+            </div>
+            <h3>Excellence in Agriculture Scholarship</h3>
+            <p>
+              Awarded to outstanding students who demonstrate strong academic
+              performance and commitment to sustainable agriculture.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder"><image class="women in science Award" image src="images/Women in Science Award.jpg"></image></div>
+            <h3>Women in Science Award</h3>
+            <p>
+              Supports female students pursuing STEM-related agricultural
+              fields, empowering future innovators.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder"><image class="innovation and Technology Grant" image src="images/Innovation and Technology Grant.jpg"></image></div>
+            <h3>Innovation and Technology Grant</h3>
+            <p>
+              For students developing technological solutions that enhance
+              agricultural productivity and sustainability.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-placeholder"><image class="international students support fund" image src="images/International Student Support Fund.png"></image></div>
+            <h3>International Student Support Fund</h3>
+            <p>
+              Financial support for international students enrolled in
+              agriculture programs at Egerton University.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="footer">
+      <footer>
+        <div class="foa-f-identity">
+          <h3>Faculty Of Agriculture</h3>
+          <p class="tagline"><span>Nurturing Minds, Feeding Nations</span></p>
+        </div>
+        <div class="footer-quicklink">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="">Programs</a></li>
+            <li><a href="">Staff Directory</a></li>
+            <li><a href="">Research & Innovations</a></li>
+            <li><a href="">Blogs</a></li>
+            <li><a href="/contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-info">
+          <h3>Contact Info</h3>
+          <ul>
+            <li>536 - Egerton University</li>
+            <br />
+            <li>+254722651888</li>
+            <br />
+            <li>foa@egerton.ac.ke</li>
+          </ul>
+        </div>
+      </footer>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

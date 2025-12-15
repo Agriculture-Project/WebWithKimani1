@@ -364,9 +364,7 @@ html, body {
       }
 
   
-      .section:first-of-type {
-        display: block;
-      }
+
 
       .clubs-flex-container {
         display: flex;
