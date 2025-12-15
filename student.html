@@ -45,7 +45,7 @@
 
     <main>
       
-      <!-- Campus Section -->
+     
       <section id="campus" class="section">
         <h2>Campus Life </h2>
         <p>
@@ -95,7 +95,7 @@
         </div>
       </section>
 
-      <!-- Clubs Section -->
+     
       <section id="clubs" class="section">
         <h2>Student Clubs</h2>
         <p>
@@ -178,9 +178,37 @@
             </div>
           </div>
         </div>
+
+        <div class="form-container">
+          <h3>Register for a Club</h3>
+          <form onsubmit="event.preventDefault(); alert('Registration Submitted!');">
+            <div class="form-group">
+              <label for="club-name">Full Name</label>
+              <input type="text" id="club-name" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="club-reg">Registration Number</label>
+              <input type="text" id="club-reg" required placeholder="e.g. A12/12345/21">
+            </div>
+            <div class="form-group">
+              <label for="club-course">Course</label>
+              <input type="text" id="club-course" required placeholder="e.g. BSc. Horticulture">
+            </div>
+             <div class="form-group">
+              <label for="club-select">Select Club</label>
+              <select id="club-select">
+                <option value="agribusiness">Agribusiness Club</option>
+                <option value="greenearth">Green Earth Society</option>
+                <option value="agritech">AgriTech Innovators</option>
+                <option value="debate">Debate & Public Speaking</option>
+              </select>
+            </div>
+            <button type="submit" class="btn">Register</button>
+          </form>
+        </div>
       </section>
 
-      <!-- Events Section -->
+      
       <section id="events" class="section">
         <h2>Events & Competitions </h2>
         <p>
@@ -226,7 +254,7 @@
         </div>
       </section>
 
-      <!-- Internships Section -->
+     
       <section id="internships" class="section">
         <h2>Internships</h2>
         <p>
@@ -287,6 +315,37 @@
           </div>
         </div>
 
+        <div class="form-container">
+          <h3>Internship Application</h3>
+          <form onsubmit="event.preventDefault(); alert('Application Submitted!');">
+             <div class="form-group">
+              <label for="intern-name">Full Name</label>
+              <input type="text" id="intern-name" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="intern-reg">Registration Number</label>
+              <input type="text" id="intern-reg" required placeholder="e.g. A12/12345/21">
+            </div>
+             <div class="form-group">
+              <label for="intern-org">Select Organization</label>
+              <select id="intern-org">
+                <option value="kari">Kenya Agricultural Research Institute</option>
+                <option value="agritech">AgriTech Startup</option>
+                <option value="foodproc">Food Processing Plant</option>
+                <option value="ministry">Ministry of Agriculture</option>
+              </select>
+            </div>
+             <div class="form-group">
+              <label for="intern-duration">Preferred Duration</label>
+              <select id="intern-duration">
+                <option value="3months">3 Months</option>
+                <option value="6months">6 Months</option>
+              </select>
+            </div>
+            <button type="submit" class="btn">Submit Application</button>
+          </form>
+        </div>
+
         <button
           class="internship-tips-btn"
           onclick="toggleInternshipTips()"
@@ -317,7 +376,7 @@
         </div>
       </section>
 
-      <!-- Research Section -->
+      
       <section id="research" class="section">
         <h2>Research Projects</h2>
         <p>
@@ -441,7 +500,7 @@
         </div>
       </section>
 
-      <!-- Scholarships Section -->
+     
       <section id="scholarships" class="section">
         <h2>Scholarships</h2>
         <p>
@@ -488,6 +547,34 @@
               agriculture programs at Egerton University.
             </p>
           </div>
+        </div>
+
+        <div class="form-container">
+          <h3>Apply for Scholarship</h3>
+          <form onsubmit="event.preventDefault(); alert('Application Submitted!');">
+            <div class="form-group">
+              <label for="scholar-name">Full Name</label>
+              <input type="text" id="scholar-name" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="scholar-reg">Registration Number</label>
+              <input type="text" id="scholar-reg" required placeholder="e.g. A12/12345/21">
+            </div>
+            <div class="form-group">
+              <label for="scholar-select">Select Scholarship</label>
+              <select id="scholar-select">
+                <option value="excellence">Excellence in Agriculture</option>
+                <option value="women">Women in Science Award</option>
+                <option value="tech">Innovation & Technology Grant</option>
+                <option value="international">International Student Support</option>
+              </select>
+            </div>
+             <div class="form-group">
+              <label for="scholar-statement">Statement of Need</label>
+              <textarea id="scholar-statement" rows="4" placeholder="Briefly explain why you need this scholarship..."></textarea>
+            </div>
+            <button type="submit" class="btn">Apply Now</button>
+          </form>
         </div>
       </section>
     </main>
