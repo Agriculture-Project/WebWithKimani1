@@ -39,9 +39,9 @@ nav ul a {
 }
 
 nav img {
-    width: 180px;
+    width: 90px;
     margin-left: 1em;
-    margin-top: -2em;
+    margin-top: 0.6em;
 }
 
 nav ul a.active,
@@ -70,10 +70,11 @@ nav h1 {
 }
 
 .title h1 {
-
+    width: 170px;
+    padding-right: 20px;
     margin: 0px;
     margin-top: 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .slogan {
@@ -143,6 +144,203 @@ nav h1 {
         font-size: 1em;
         margin-left: 3em;
     }
+   #about-section h2{
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    font-size: 2.5rem;
+}
+.about-section-bottom{
+    width: 380px;
+    height: 4px;
+    background-color: yellowgreen;
+    border-radius: 5px;
+    position: absolute;
+    top: 152px;
+    left: 40px;
+    
+}
+
+.intro-imgs img{
+    position: absolute;
+    width: 600px;
+    top: 170px;
+    border-radius: 10px;
+}
+.abt-hist-lship{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(8, 104, 21);
+    
+}
+#body-section{
+    position: absolute;
+    top: 800px;
+    width: 600px;
+    padding-right: 50px;
+    left: 0px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.dean-messo{
+    padding: 20px;
+    width: 40px;
+    margin: 20px;
+    border-radius: 5px;
+    left: 800px;
+    overflow: hidden;
+    
+}
+.dean-messo h3{
+    font-size: 1.5rem;
+    position: absolute;
+    left: 100px;
+    top: 10px;
+}
+.dean-messo p{
+    position: absolute;
+    left: 0px;
+    top: 300px;
+    width: 400px;
+}
+.dean-messo img{
+    position: absolute;
+    top: 70px;
+    border-radius: 20px;
+}
+.dean-messo .dean-name{
+    position: absolute;
+    top: 200px;
+}
+
+#mission-vision{
+    position: absolute;
+    top: 600px;
+    right: 70px;
+    display: flex;
+    height: 350px;
+    width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.vision-breaker-img{
+    position: absolute;
+    right: 580px;
+    width: 180px;
+}
+.foa-mission, 
+.foa-vision{
+    padding: 20px;
+    width: 400px;
+    margin: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden; */
+     
+}
+
+
+
+.quick-links{
+    display: none;
+}
+
+.quick-links a ,.quick-links h3{
+    color: #fff;
+
+}
+.quick-links a:hover{
+    text-decoration: underline;
+    color: #d7da33;
+}
+
+/* footers */
+#footer{
+    position: absolute;
+    display: block;
+    top: 1200px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    
+    background-color: rgb(19, 59, 19);
+}
+footer{
+    display: block;
+    align-items: flex-start;
+    height: 200px;
+    position: relative;
+    left: 200px;
+    
+}
+.foa-f-identity img{
+    position: relative;
+    width: 150px;
+    left: -20px;
+}
+
+
+.footer-quicklink,
+.footer-contact-info,.footer-social h3{
+    color: #fff;
+}
+
+#footer a{
+    color: #fff;
+}
+#footer a:hover{
+    color: #7fa102;
+}
+#footer ul{
+    color: #fff;
+    list-style: none;
+}
+.foa-f-identity h3{
+    position: absolute;
+    left: -180px;
+    top: 10px;
+    color: #d7da33;
+    font-size: 2.5rem;
+    width: 200px;
+}
+.tagline{
+  position: absolute;
+    left: -180px;
+    color: #fff;
+    top: 130px;
+    font-style: italic;
+    font-size: 1rem;  
+}
+.footer-social ul{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 2em;
+    top: 200px;
+    right: 400px;
+     
+}
+.footer-social ul i{
+    justify-content: space-between;
+    color: black;
+    /* width: 20px; */
+}
+.footer-quicklink h3,.footer-quicklink li.footer-contact-info h3,.footer-contact-info li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 }
 
@@ -356,3 +554,8 @@ footer{
     color: black;
     /* width: 20px; */
 }
+.footer-quicklink h3,.footer-quicklink li.footer-contact-info h3,.footer-contact-info li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
