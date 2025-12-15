@@ -1,0 +1,197 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/Green Modern Agriculture Logo Design.png">
+    <title>Contact us- Faculty of Agriculture</title>
+    <style>
+        header {
+            background-color: #00a651;
+            width: 100%;
+            margin: 0;
+            margin-left: -2em;
+            margin-top: -2em;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            background: inherit;
+            display: flex;
+            padding: 20px;
+            height: 80px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1em;
+            list-style: none;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10;
+            transition: background 0.05s;
+        }
+
+        nav img {
+            width: 180px;
+            margin-left: 1em;
+            margin-top: -2em;
+        }
+
+        nav ul a.active,
+        nav ul a:hover,
+        nav ul a:focus {
+            background-color: rgb(158, 156, 3);
+            color: rgba(27, 25, 25, 0.918);
+            border-radius: 5px;
+            padding: 10px
+        }
+
+        nav h1 {
+            color: #fff;
+            padding: 0;
+        }
+
+        .undercolor {
+            background-color: red;
+            width: 1000%;
+            height: 4px;
+            right: 0;
+        }
+
+        .title h1 {
+            margin: 0px;
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+
+        .slogan {
+            margin: 0px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #f1f1f1;
+        }
+
+        .menu-btn {
+            width: 50px;
+            display: none;
+        }
+
+        @media (max-width:900px) {
+            .menu-btn {
+                width: 50px;
+                display: block;
+                position: absolute;
+                right: 0.5em;
+                top: 2em;
+                bottom: 1em;
+                cursor: pointer;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+                padding: 10px;
+                width: 1000%;
+            }
+
+            nav img {
+                width: 120px;
+                margin: 0 0 1em 0;
+            }
+
+            .title {
+                margin-left: 7em;
+                margin-top: -8em;
+                text-align: left;
+
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+                width: 100%;
+                padding-left: 0;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                width: 100%;
+                display: none;
+            }
+
+            nav ul.show-menu li {
+                display: block;
+            }
+
+            nav ul a {
+                width: 100%;
+                padding: 0.75em 0.5em;
+                font-size: 1em;
+                margin-left: 3em;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href=""><img src="/img/foa-logo.svg" alt=""></a>
+            <img class="menu-btn" src="/img/menu.png" alt="">
+            <div class="title">
+                <h1>Faculty of Agriculture</h1>
+                <p class="slogan" style="font-style: italic;">Nurturing Minds, Feeding Nations</p>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">innovations</a></li>
+                <li><a href="#">Staffs</a></li>
+                <li><a href="#">Student</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Authors</a></li>
+            </ul>
+
+        </nav>
+        <div class="undercolor"></div>
+    </header>
+    <form action="" >
+        <label for="Name"></label>
+        <input type="text" placeholder="Name" required><br>
+        <label for="Contact"></label>
+        <input type="text" placeholder="Contact" required><br>
+        <label for="Email"></label>
+        <input type="email" placeholder="Email" required><br>
+    </form>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navList = document.querySelector('nav ul');
+
+        menuBtn.addEventListener('click', () => {
+            navList.classList.toggle('show-menu')
+        });
+    </script>
+</body>
+
+</html>
