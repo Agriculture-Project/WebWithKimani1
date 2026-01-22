@@ -1,4 +1,3 @@
-// Mobile menu functionality
 const menuBtn = document.querySelector('.menu-btn');
 const navList = document.querySelector('nav ul');
 
@@ -6,12 +5,10 @@ menuBtn.addEventListener('click', () => {
     navList.classList.toggle('show-menu');
 });
 
-// Staff filtering and search functionality
 const filterButtons = document.querySelectorAll('.filter-btn');
 const staffCards = document.querySelectorAll('.staff-card');
 const searchInput = document.getElementById('staffSearch');
 
-// Function to animate cards
 function animateCards() {
     staffCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
@@ -19,19 +16,16 @@ function animateCards() {
     });
 }
 
-// Filter by department
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
         
-        // Add active class to clicked button
         button.classList.add('active');
         
         const filterValue = button.getAttribute('data-filter');
         
         staffCards.forEach(card => {
-            card.classList.remove('animate'); // Reset animation
+            card.classList.remove('animate'); 
             if (filterValue === 'all' || card.getAttribute('data-department') === filterValue) {
                 card.style.display = 'block';
             } else {
@@ -40,7 +34,6 @@ filterButtons.forEach(button => {
         });
         
         setTimeout(() => {
-            // Re-apply animation to visible cards
             document.querySelectorAll('.staff-card[style*="display: block"]').forEach((card, index) => {
                 card.style.animationDelay = `${index * 0.1}s`;
                 card.classList.add('animate');
@@ -49,7 +42,6 @@ filterButtons.forEach(button => {
     });
 });
 
-// Search functionality
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
     
@@ -66,10 +58,8 @@ searchInput.addEventListener('input', () => {
     });
 });
 
-// Animate cards on page load
 window.addEventListener('load', animateCards);
 
-// Close menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!e.target.closest('nav') && navList.classList.contains('show-menu')) {
         navList.classList.remove('show-menu');

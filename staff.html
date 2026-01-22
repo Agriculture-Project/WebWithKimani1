@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="icon" href="/img/Green Modern Agriculture Logo.jpg">
     <title>Staff Directory - Faculty of Agriculture</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <header>
         <nav>
-            <a href=""><img src="/img/foa-logo.svg" alt="Faculty of Agriculture Logo"></a>
-            <img class="menu-btn" src="/img/menu.png" alt="Menu">
+            <a class="nav-logo" href=""><img src="/img/Green Modern Agriculture Logo.jpg" alt=""></a>
+            <img class="menu-btn" src="/img/menu.png" alt="">
             <div class="title">
                 <h1>Faculty of Agriculture</h1>
-                <p class="slogan">Nurturing Minds, Feeding Nations</p>
-            </div>
+         </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="innovations.html">Innovations</a></li>
-                <li><a href="staff.html" class="active">Staff</a></li>
-                <li><a href="student.html">Student</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="authors.html">Authors</a></li>
+                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                <div class="">
+                    <li><a href="/about.html"><i class="fa fa-info-circle"></i> About</a></li>
+                </div>
+                <li><a href="#"><i class="fa fa-book-open"></i> Programs</a></li>
+                <li><a href="/research.html"><i class="fa fa-lightbulb"></i> Research</a></li>
+                <li><a href="/staff.html"><i class="fa fa-users"></i> Staffs</a></li>
+                <li><a href="#"><i class="fa fa-user-graduate"></i> Student</a></li>
+                <li><a href="#"><i class="fa fa-blog"></i> Blogs</a></li>
+                <li><a href="/contact-us.html"><i class="fa fa-envelope"></i> Contact</a></li>
+                <li><a href="#"><i class="fa fa-pen-nib"></i> Authors</a></li>
+        
             </ul>
+        
         </nav>
         <div class="undercolor"></div>
     </header>
@@ -54,7 +60,7 @@
                     <img src="img/img1.jpg" alt="">
                 </div>
                 <div class="staff-info">
-                    <h3 class="staff-name">Dr. Athman Rajab</h3>
+                    <h3 class="staff-name">MR. ABDI BAGAJA GUYO</h3>
                     <p class="staff-position">Professor of Agronomy</p>
                     <span class="staff-department">Crop Science</span>
                     <div class="staff-contact">
@@ -70,11 +76,11 @@
                     <img src="img/img2.jpg" alt="">
                 </div>
                 <div class="staff-info">
-                    <h3 class="staff-name">Prof. Muzamil Mohammed</h3>
+                    <h3 class="staff-name">Prof.Albert Mukoyo</h3>
                     <p class="staff-position">Head of Animal Science</p>
                     <span class="staff-department">Animal Science</span>
                     <div class="staff-contact">
-                        <p>Email: muzamil@gmail.com </p>
+                        <p>Email: Saidi.suleiman@gmail.com </p>
                         <p>Phone: +254 726 151104</p>
                         <p>Office: Livestock Center, Room 105</p>
                     </div>
@@ -96,13 +102,13 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="staff-card" data-department="agricultural-economics">
                 <div class="staff-image">
                     <img src="img/img3.jpg" alt="">
                 </div>
                 <div class="staff-info">
-                    <h3 class="staff-name">Dr. Mohammed Abshir</h3>
+                    <h3 class="staff-name">Dr. Suleiman Saidi</h3>
                     <p class="staff-position">Professor of Agricultural Economics</p>
                     <span class="staff-department">Agricultural Economics</span>
                     <div class="staff-contact">
@@ -112,7 +118,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="staff-card" data-department="extension">
                 <div class="staff-image">
                     <img src="img/img5.jpg" alt="">
@@ -146,7 +152,39 @@
             </div>
         </div>
     </div>
+            <footer>
+            <div class="foa-f-identity">
+                <h3>Faculty Of Agriculture</h3>
+                <p class="tagline"><span>Nurturing Minds, Feeding Nations</span></p>
+            </div>
+            <div class="footer-quicklink">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="">Programs</a></li>
+                    <li><a href="">Staff Directory</a></li>
+                    <li><a href="">Research & Innovations</a></li>
+                    <li><a href="">Blogs</a></li>
+                    <li><a href="/contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-info">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>536 - Egerton University</li><br>
+                    <li>+254722651888</li><br>
+                    <li>foa@egerton.ac.ke</li>
+                </ul>
+                
+            </div>
+            
+        </footer>
     
     <script src="script.js"></script>
 </body>
+<script>
+    window.onload = function () {
+        document.querySelector('.undercolor').classList.add('active');
+    }
+</script>
 </html>
