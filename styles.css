@@ -1,10 +1,7 @@
-/* Header styles (copied from original) */
 header {
     background-color: #00a651;
     width: 100%;
     margin: 0;
-    margin-left: -2em;
-    margin-top: -2em;
     position: fixed;
     top: 0;
     left: 0;
@@ -64,9 +61,10 @@ nav h1 {
     width: 0px;
     height: 4px;
     right: 0px;
-    transition: width  10s ease-in-out;
+    transition: width 10s ease-in-out;
 }
-.undercolor.active{
+
+.undercolor.active {
     width: 105%;
 }
 
@@ -77,6 +75,7 @@ nav h1 {
     margin-top: 20px;
     font-size: 1.5rem;
 }
+
 .slogan {
     margin: 0px;
     margin-top: 10px;
@@ -162,7 +161,7 @@ body {
     margin: 120px auto 40px;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
 
@@ -205,7 +204,7 @@ h1.page-title {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-     animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .search-box input {
@@ -234,7 +233,7 @@ h1.page-title {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     opacity: 0;
     transform: translateY(20px);
@@ -246,7 +245,7 @@ h1.page-title {
 
 .staff-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .staff-image {
@@ -302,9 +301,10 @@ h1.page-title {
 /* Keyframe animations */
 @keyframes fadeIn {
     from {
-    opacity: 0;
+        opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
@@ -314,6 +314,7 @@ h1.page-title {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -321,76 +322,309 @@ h1.page-title {
 }
 
 /* Responsive styles */
+/* Responsive styles */
 @media (max-width: 900px) {
-    .menu-btn{
-        width: 50px;
+    .menu-btn {
         display: block;
+        width: 35px;
+        /* Slightly smaller, more standard size */
         position: absolute;
-        right: 0.5em;
-        top: 2em;
-        bottom: 1em;
+        right: 20px;
+        top: 25px;
+        /* Align with header vertical center */
         cursor: pointer;
+        z-index: 1002;
+        /* Above the menu */
+        transition: transform 0.3s ease;
     }
-    
-    nav{
-        flex-direction: column;
-        align-items: flex-start;
+
+    /* Optional: Rotate/animate menu button if we had a class on it. 
+       For now, we rely on the drawer animation. */
+
+    nav {
+        /* Reset nav container to not expand */
+        height: 80px;
+        padding: 0 10px;
+        /* Reduced padding */
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        /* Align start */
+        align-items: center;
+        /* Vertically center */
+        display: flex;
+        flex-direction: row;
+        /* Ensure row layout */
+    }
+
+    nav .nav-logo {
+        display: block;
+        /* Show logo */
+        margin-right: 10px;
+    }
+
+    nav .nav-logo img {
+        width: 60px;
+        /* Mobile logo size */
         height: auto;
-        padding:10px;
-        width: 1000%;
+        margin: 0;
+        /* Reset margins */
+        border-radius: 50%;
+        /* Optional: round if it looks better, matches staff images style */
     }
-    nav img{
-        width: 120px;
-        margin: 0 0 1em 0;
-    }
+
     .title {
-        margin-left: 7em;
-        margin-top: -8em;
+        margin: 0;
         text-align: left;
-        
+        position: static;
+        /* Let it flow in flexbox */
     }
-    nav ul{
+
+    .title h1 {
+        font-size: 1.1rem;
+        /* Slightly smaller to fit */
+        width: auto;
+        margin: 0;
+        padding: 0;
+        line-height: 1.2;
+    }
+
+    /* The Side Drawer */
+    nav ul {
+        display: flex;
+        /* Always flex, just hidden off-screen */
         flex-direction: column;
-        gap: 0.5em;
-        width: 100%;
-        padding-left: 0;
+        justify-content: flex-start;
         align-items: flex-start;
-        max-height: 0; /* For collapse animation */
-        overflow: hidden; /* For collapse animation */
-        transition: max-height 0.5s ease-in-out; /* Smooth transition */
+        position: fixed;
+        top: 0;
+        right: -320px;
+        /* Hide off-screen */
+        width: 280px;
+        /* Fixed width drawer */
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.95);
+        /* White glass */
+        backdrop-filter: blur(10px);
+        padding: 100px 30px 40px 30px;
+        /* Top padding clears the close area */
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
+        /* Soft shadow */
+        transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        /* Smooth ease-out */
+        z-index: 1001;
+        gap: 0;
+        /* Clear gap */
+        overflow-y: auto;
+        /* Scrollable if long */
     }
-    nav ul.show-menu{
-        max-height: 500px; /* Adjust as needed */
+
+    nav ul.show-menu {
+        right: 0;
     }
-    nav ul li{
+
+    /* Styles for list items in drawer */
+    nav ul li {
         width: 100%;
-        display: none;
+        display: block;
+        /* Always visible in drawer */
+        margin-bottom: 15px;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
-    nav ul.show-menu li{
-        display:block;
-    }
-    nav ul a{
+
+    .about-click {
         width: 100%;
-        padding: 0.75em 0.5em;
-        font-size: 1em;
-        margin-left: 3em;
+        /* Fix for the div wrapping li */
     }
-    
+
+    nav ul li a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: 1.1rem;
+        color: #333;
+        padding: 12px 15px;
+        border-radius: 12px;
+        margin: 0;
+        background: transparent;
+        transition: all 0.2s ease;
+    }
+
+    nav ul li a i {
+        margin-right: 15px;
+        font-size: 1.2rem;
+        width: 25px;
+        /* Fixed width for icon alignment */
+        text-align: center;
+        color: #00a651;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        background-color: rgba(0, 166, 81, 0.1);
+        /* Light green tint */
+        color: #00a651;
+        transform: translateX(5px);
+    }
+
+    /* Staggered animation for list items when menu opens */
+    nav ul.show-menu li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav ul.show-menu li:nth-child(1) {
+        transition-delay: 0.10s;
+    }
+
+    nav ul.show-menu li:nth-child(2) {
+        transition-delay: 0.15s;
+    }
+
+    nav ul.show-menu li:nth-child(3) {
+        transition-delay: 0.20s;
+    }
+
+    nav ul.show-menu li:nth-child(4) {
+        transition-delay: 0.25s;
+    }
+
+    nav ul.show-menu li:nth-child(5) {
+        transition-delay: 0.30s;
+    }
+
+    nav ul.show-menu li:nth-child(6) {
+        transition-delay: 0.35s;
+    }
+
+    nav ul.show-menu li:nth-child(7) {
+        transition-delay: 0.40s;
+    }
+
+    nav ul.show-menu li:nth-child(8) {
+        transition-delay: 0.45s;
+    }
+
+    nav ul.show-menu li:nth-child(9) {
+        transition-delay: 0.50s;
+    }
+
+    /* Handle the div wrapper delay */
+    nav ul.show-menu div.about-click li {
+        transition-delay: 0.22s;
+    }
+
+
+    /* Content Adjustments */
     .container {
-        margin-top: 180px;
+        margin-top: 100px;
+        /* Reduced margin since nav isn't expanding */
+        padding: 15px;
     }
-    
+
     .staff-grid {
         grid-template-columns: 1fr;
+        /* Stack cards */
     }
-    
+
     .department-filter {
         flex-direction: column;
-        align-items: center;
     }
-    
+
     .department-filter button {
-        width: 80%;
-        margin-bottom: 5px;
+        width: 100%;
+    }
+}
+
+/* Footer Styles */
+#footer {
+    background-color: rgb(19, 59, 19);
+    color: white;
+    padding: 40px 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.foa-f-identity,
+.footer-quicklink,
+.footer-contact-info {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.foa-f-identity h3 {
+    color: #d7da33;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.foa-f-identity .tagline {
+    font-style: italic;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.foa-f-identity img {
+    /* Assuming there's an image in identity */
+    display: none;
+    /* Hide if not needed or style properly */
+}
+
+.footer-quicklink h3,
+.footer-contact-info h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-quicklink ul,
+.footer-contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-quicklink ul li,
+.footer-contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.footer-quicklink a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-quicklink a:hover {
+    color: #7fa102;
+    padding-left: 5px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foa-f-identity,
+    .footer-quicklink,
+    .footer-contact-info {
+        width: 100%;
+        margin-bottom: 30px;
     }
 }

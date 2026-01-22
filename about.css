@@ -1,561 +1,272 @@
-header {
-    background-color: #00a651;
+/* Responsive About Page Styles - Revamped */
+
+/* Ensure body has space for fixed header */
+body {
+    padding-top: 100px;
+    background-color: #f9fdf9;
+    /* Very light green hint */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #444;
+}
+
+/* Sections Container */
+#about-section,
+#body-section,
+#mission-vision,
+.quick-links {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    /* More breathing room */
+    height: auto;
+}
+
+/* About Section Header */
+#about-section h2 {
+    font-size: 2.5rem;
+    color: #00a651;
+    /* Official Green */
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+}
+
+#about-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #FFC107;
+    /* Gold accent */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.about-section-bottom {
+    display: none;
+    /* Replaced by pseudo-element above */
+}
+
+/* About Content Grid */
+.abt-hist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Premium shadow */
+}
+
+/* Slideshow Container */
+.intro-imgs {
+    position: relative;
     width: 100%;
-    margin: 0;
-    margin-left: -2em;
-    margin-top: -2em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-nav {
-    background: inherit;
-    display: flex;
-    padding: 20px;
-    height: 80px;
-    border-radius: 5px;
+.intro-imgs img {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 1em;
-    list-style: none;
+.intro-imgs img.active {
+    opacity: 1;
 }
 
-nav ul a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: .8rem;
+/* History Text */
+.abt-hist-lship {
     padding: 10px;
-    border-radius: 5px;
-    margin: 10;
-    transition: background 0.05s;
 }
 
-nav img {
-    width: 90px;
-    margin-left: 1em;
-    margin-top: 0.6em;
+.abt-hist-lship h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
-nav ul a.active,
-nav ul a:hover,
-nav ul a:focus {
-    background-color: rgb(158, 156, 3);
-    color: rgba(27, 25, 25, 0.918);
-    border-radius: 5px;
-    padding: 10px
+.abt-hist-lship p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
 }
 
-nav h1 {
-    color: #fff;
+a.readmore {
+    color: #00a651;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+a.readmore:hover {
+    border-bottom-color: #00a651;
+}
+
+/* Dean's Message */
+#body-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Deeper shadow */
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e1e1e1;
+}
+
+/* Decorative quote icon */
+#body-section::before {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 10rem;
+    color: rgba(0, 166, 81, 0.05);
+    font-family: serif;
+    pointer-events: none;
+}
+
+.dean-messo h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.dean-content-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.dean-foa-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dean-text {
+    flex: 1;
+}
+
+.dean-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    font-style: italic;
+    /* Quote style */
+}
+
+.dean-name {
+    display: block;
+    margin-top: 15px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #00a651 !important;
+    /* Force green override */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mission & Vision Section */
+#mission-vision {
+    display: flex;
+    gap: 30px;
     padding: 0;
 }
 
-.undercolor {
-    background-color: red;
-    width: 0px;
-    height: 4px;
-    right: 0px;
-    transition: width  10s ease-in-out;
-}
-.undercolor.active{
-    width: 105%;
-}
-
-.title h1 {
-    width: 170px;
-    padding-right: 20px;
-    margin: 0px;
-    margin-top: 20px;
-    font-size: 2rem;
+.foa-mission,
+.foa-vision {
+    flex: 1;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border-top: 5px solid #00a651;
 }
 
-.slogan {
-    margin: 0px;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #f1f1f1;
+.foa-mission:hover,
+.foa-vision:hover {
+    transform: translateY(-10px);
 }
 
-.menu-btn {
-    width: 50px;
+.foa-mission h3,
+.foa-vision h3 {
+    color: #00a651;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.foa-mission p,
+.foa-vision p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Helper hidden classes */
+.abt-hist-intro,
+.abt-hist-history,
+.abt-hist-value,
+.abt-hist-mission,
+.abt-hist-vision,
+.vision-breaker-img,
+.quick-links,
+.dean-hr,
+.dean-breaker,
+.vision-breaker,
+.mission-breaker,
+.mission-vision-breaker {
     display: none;
+    /* Hide placeholder/unused divs */
 }
 
-@media (max-width:900px) {
-    .menu-btn {
-        width: 50px;
-        display: block;
-        position: absolute;
-        right: 0.5em;
-        top: 2em;
-        bottom: 1em;
-        cursor: pointer;
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .abt-hist {
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
 
-    nav {
+    .intro-imgs {
+        height: 250px;
+    }
+
+    .dean-content-wrapper {
         flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 10px;
-        width: 1000%;
+        gap: 30px;
+        text-align: center;
     }
 
-    nav img {
-        width: 120px;
-        margin: 0 0 1em 0;
+    .dean-foa-img {
+        width: 180px;
+        height: 180px;
     }
 
-    .title {
-        margin-left: 7em;
-        margin-top: -8em;
-        text-align: left;
-
-    }
-
-    nav ul {
+    #mission-vision {
         flex-direction: column;
-        gap: 0.5em;
-        width: 100%;
-        padding-left: 0;
-        align-items: flex-start;
     }
 
-    nav ul li {
-        width: 100%;
-        display: none;
+    #about-section h2 {
+        font-size: 1.8rem;
     }
-
-    nav ul.show-menu li {
-        display: block;
-    }
-
-    nav ul a {
-        width: 100%;
-        padding: 0.75em 0.5em;
-        font-size: 1em;
-        margin-left: 3em;
-    }
-   #about-section h2{
-    position: absolute;
-    top: 80px;
-    left: 40px;
-    font-size: 2.5rem;
 }
-.about-section-bottom{
-    width: 380px;
-    height: 4px;
-    background-color: yellowgreen;
-    border-radius: 5px;
-    position: absolute;
-    top: 152px;
-    left: 40px;
-    
-}
-
-.intro-imgs img{
-    position: absolute;
-    width: 600px;
-    top: 170px;
-    border-radius: 10px;
-}
-.abt-hist-lship{
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-}
-a{
-    text-decoration: none;
-}
-a:hover{
-    color: rgb(8, 104, 21);
-    
-}
-#body-section{
-    position: absolute;
-    top: 800px;
-    width: 600px;
-    padding-right: 50px;
-    left: 0px;
-    height: 350px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-.dean-messo{
-    padding: 20px;
-    width: 40px;
-    margin: 20px;
-    border-radius: 5px;
-    left: 800px;
-    overflow: hidden;
-    
-}
-.dean-messo h3{
-    font-size: 1.5rem;
-    position: absolute;
-    left: 100px;
-    top: 10px;
-}
-.dean-messo p{
-    position: absolute;
-    left: 0px;
-    top: 300px;
-    width: 400px;
-}
-.dean-messo img{
-    position: absolute;
-    top: 70px;
-    border-radius: 20px;
-}
-.dean-messo .dean-name{
-    position: absolute;
-    top: 200px;
-}
-
-#mission-vision{
-    position: absolute;
-    top: 600px;
-    right: 70px;
-    display: flex;
-    height: 350px;
-    width: 600px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
-
-.vision-breaker-img{
-    position: absolute;
-    right: 580px;
-    width: 180px;
-}
-.foa-mission, 
-.foa-vision{
-    padding: 20px;
-    width: 400px;
-    margin: 20px;
-    border-radius: 15px;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    overflow: hidden; */
-     
-}
-
-
-
-.quick-links{
-    display: none;
-}
-
-.quick-links a ,.quick-links h3{
-    color: #fff;
-
-}
-.quick-links a:hover{
-    text-decoration: underline;
-    color: #d7da33;
-}
-
-/* footers */
-#footer{
-    position: absolute;
-    display: block;
-    top: 1200px;
-    width: 100%;
-    left: 0;
-    right: 0;
-    
-    background-color: rgb(19, 59, 19);
-}
-footer{
-    display: block;
-    align-items: flex-start;
-    height: 200px;
-    position: relative;
-    left: 200px;
-    
-}
-.foa-f-identity img{
-    position: relative;
-    width: 150px;
-    left: -20px;
-}
-
-
-.footer-quicklink,
-.footer-contact-info,.footer-social h3{
-    color: #fff;
-}
-
-#footer a{
-    color: #fff;
-}
-#footer a:hover{
-    color: #7fa102;
-}
-#footer ul{
-    color: #fff;
-    list-style: none;
-}
-.foa-f-identity h3{
-    position: absolute;
-    left: -180px;
-    top: 10px;
-    color: #d7da33;
-    font-size: 2.5rem;
-    width: 200px;
-}
-.tagline{
-  position: absolute;
-    left: -180px;
-    color: #fff;
-    top: 130px;
-    font-style: italic;
-    font-size: 1rem;  
-}
-.footer-social ul{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    gap: 2em;
-    top: 200px;
-    right: 400px;
-     
-}
-.footer-social ul i{
-    justify-content: space-between;
-    color: black;
-    /* width: 20px; */
-}
-.footer-quicklink h3,.footer-quicklink li.footer-contact-info h3,.footer-contact-info li{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-}
-
-#about-section h2{
-    position: absolute;
-    top: 80px;
-    left: 40px;
-    font-size: 2.5rem;
-}
-.about-section-bottom{
-    width: 380px;
-    height: 4px;
-    background-color: yellowgreen;
-    border-radius: 5px;
-    position: absolute;
-    top: 152px;
-    left: 40px;
-    
-}
-
-.intro-imgs img{
-    position: absolute;
-    width: 600px;
-    top: 170px;
-    border-radius: 10px;
-}
-.abt-hist-lship{
-    position: absolute;
-    right: 300px;
-    top: 170px;
-    width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-}
-a{
-    text-decoration: none;
-}
-a:hover{
-    color: rgb(8, 104, 21);
-    
-}
-#body-section{
-    position: absolute;
-    top: 600px;
-    width: 600px;
-    padding-right: 50px;
-    left: 20px;
-    height: 350px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-.dean-messo{
-    padding: 20px;
-    width: 400px;
-    margin: 20px;
-    border-radius: 15px;
-    
-    overflow: hidden;
-    
-}
-.dean-messo h3{
-    font-size: 1.5rem;
-    position: absolute;
-    left: 100px;
-    top: 10px;
-}
-.dean-messo p{
-    position: absolute;
-    left: 170px;
-    top: 50px;
-    width: 400px;
-}
-.dean-messo img{
-    position: absolute;
-    top: 70px;
-    border-radius: 20px;
-}
-.dean-messo .dean-name{
-    position: absolute;
-    top: 200px;
-}
-
-#mission-vision{
-    position: absolute;
-    top: 600px;
-    right: 70px;
-    display: flex;
-    height: 350px;
-    width: 600px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
-
-.vision-breaker-img{
-    position: absolute;
-    right: 580px;
-    width: 180px;
-}
-.foa-mission, 
-.foa-vision{
-    padding: 20px;
-    width: 400px;
-    margin: 20px;
-    border-radius: 15px;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    overflow: hidden; */
-     
-}
-
-
-
-.quick-links{
-    position: absolute;
-    top: 170px;
-    width: 150px;
-    right: 20px;
-    padding: 20px;    
-    padding-top: 0;
-    padding-right: 90px;
-    border-radius: 15px;
-    background-color: #00a651;
-}
-
-.quick-links a ,.quick-links h3{
-    color: #fff;
-
-}
-.quick-links a:hover{
-    text-decoration: underline;
-    color: #d7da33;
-}
-
-/* footers */
-#footer{
-    position: absolute;
-    display: flex;
-    top: 1200px;
-    width: 100%;
-    left: 0;
-    right: 0;
-    
-    background-color: rgb(19, 59, 19);
-}
-footer{
-    display: flex;
-    align-items: flex-start;
-    height: 200px;
-    position: relative;
-    left: 200px;
-    
-}
-.foa-f-identity img{
-    position: relative;
-    width: 150px;
-    left: -20px;
-}
-.footer-quicklink,
-.footer-contact-info,.footer-social{
-    padding: 50px;
-    position: relative;
-    top: -40px;
-    left: 170px;
-}
-#footer h3{
-    /* color: #fff; */
-}
-.footer-quicklink,
-.footer-contact-info,.footer-social h3{
-    color: #fff;
-}
-
-#footer a{
-    color: #fff;
-}
-#footer a:hover{
-    color: #7fa102;
-}
-#footer ul{
-    color: #fff;
-    list-style: none;
-}
-.foa-f-identity h3{
-    position: absolute;
-    left: -180px;
-    top: 10px;
-    color: #d7da33;
-    font-size: 2.5rem;
-    width: 200px;
-}
-.tagline{
-  position: absolute;
-    left: -180px;
-    color: #fff;
-    top: 130px;
-    font-style: italic;
-    font-size: 1rem;  
-}
-.footer-social ul{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    gap: 2em;
-    top: 200px;
-    right: 400px;
-     
-}
-.footer-social ul i{
-    justify-content: space-between;
-    color: black;
-    /* width: 20px; */
-}
-.footer-quicklink h3,.footer-quicklink li.footer-contact-info h3,.footer-contact-info li{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-

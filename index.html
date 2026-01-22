@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/Green Modern Agriculture Logo Design.png">
+    <title>Faculty of Agriculture - Egerton University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        /* Home Page Specific Styles */
+        .home-hero {
+            height: 90vh;
+            /* Default background if JS fails */
+            background-color: #208a2e;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+            position: relative;
+            transition: background-image 1s ease-in-out;
+        }
+
+        /* Overlay to ensure text readability */
+        .home-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: moveUp 1s ease-out;
+            position: relative;
+            z-index: 2;
+            /* Above overlay */
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #004d00;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            background-color: #ffed4a;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            border-bottom: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: #00a651;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #00a651;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .feature-link {
+            color: #00a651;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* New Section: Latest News */
+        .latest-news {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #00a651;
+            margin-bottom: 40px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-img {
+            height: 200px;
+            background-color: #ddd;
+        }
+
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .news-excerpt {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        /* Partners Section */
+        .partners {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 30px;
+            opacity: 0.7;
+        }
+
+        .partner-logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #aaa;
+            border: 2px dashed #ddd;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Quick Stats / Parallax Strip */
+        .stats-stripe {
+            background-color: #00a651;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .stat-item h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        @keyframes moveUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <a href="/index.html"><img src="/img/Green Modern Agriculture Logo.jpg" alt="" class="nav-logo-img"></a>
+            </div>
+            <div class="title">
+                <h1>Faculty of Agriculture</h1>
+            </div>
+            <div class="menu-btn"><img src="/img/menu.png" alt="Menu"></div>
+            <ul>
+                <li><a href="/index.html" class="active"><i class="fa fa-home"></i> Home</a></li>
+                <div class="about-click">
+                    <li><a href="/about.html"><i class="fa fa-info-circle"></i> About</a></li>
+                </div>
+                <li><a href="/programs.html"><i class="fa fa-book-open"></i> Programs</a></li>
+                <li><a href="/research.html"><i class="fa fa-lightbulb"></i> Research</a></li>
+                <li><a href="/staff.html"><i class="fa fa-users"></i> Staffs</a></li>
+                <li><a href="/student.html"><i class="fa fa-user-graduate"></i> Student</a></li>
+                <li><a href="/news-events.html"><i class="fa fa-newspaper"></i> News & Events</a></li>
+                <li><a href="/contact-us.html"><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="undercolor"></div>
+    </header>
+
+    <div class="home-hero" id="heroSlider">
+        <div class="hero-content">
+            <h1>Nurturing Minds, Feeding Nations</h1>
+            <p>Welcome to the Faculty of Agriculture at Egerton University. We are committed to excellence in
+                agricultural training, research, and extension servicing the needs of the nation and the world.</p>
+            <a href="/about.html" class="cta-btn">Learn More About Us</a>
+        </div>
+    </div>
+
+    <section class="features">
+        <div class="feature-card" onclick="location.href='/programs.html'">
+            <i class="fa fa-graduation-cap feature-icon"></i>
+            <h3>Academic Programs</h3>
+            <p>Explore our diverse range of undergraduate and postgraduate programs designed for the future of
+                agriculture.</p>
+            <a href="/programs.html" class="feature-link">View Programs &rarr;</a>
+        </div>
+
+        <div class="feature-card" onclick="location.href='/research.html'">
+            <i class="fa fa-flask feature-icon"></i>
+            <h3>Research & Innovation</h3>
+            <p>Discover our cutting-edge research projects contributing to food security and sustainable development.
+            </p>
+            <a href="/research.html" class="feature-link">Explore Research &rarr;</a>
+        </div>
+
+        <div class="feature-card" onclick="location.href='/staff.html'">
+            <i class="fa fa-users feature-icon"></i>
+            <h3>Expert Staff</h3>
+            <p>Meet our dedicated faculty members who are leaders in their respective fields of agricultural science.
+            </p>
+            <a href="/staff.html" class="feature-link">Meet the Team &rarr;</a>
+        </div>
+    </section>
+
+    <!-- New Section: Latest News & Updates -->
+    <section class="latest-news">
+        <h2 class="section-title">Latest Knowledge & News</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-img"><img src="/img/Annual Agriculture Innovation Fair.jpg" alt="News 1"
+                        onerror="this.src='/img/healthy-crops.jpg'"></div>
+                <div class="news-content">
+                    <div class="news-date">Oct 15, 2025</div>
+                    <div class="news-title">Innovation Fair Success</div>
+                    <p class="news-excerpt">Our annual innovation fair showcased over 50 student projects focused on
+                        sustainable farming solutions.</p>
+                    <a href="/student.html" class="feature-link">Read More</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-img"><img src="/img/Climate-Resilient Maize Trial.jpg" alt="News 2"
+                        onerror="this.src='/img/foa-about-pic2.svg'"></div>
+                <div class="news-content">
+                    <div class="news-date">Sept 28, 2025</div>
+                    <div class="news-title">New Maize Variety Released</div>
+                    <p class="news-excerpt">The Faculty has released a new drought-resistant maize variety expected to
+                        boost yields by 30%.</p>
+                    <a href="/student.html" class="feature-link">Read More</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-img"><img src="/img/Women in Science Award.jpg" alt="News 3"
+                        onerror="this.src='/img/foa-about-pic4.svg'"></div>
+                <div class="news-content">
+                    <div class="news-date">Sept 10, 2025</div>
+                    <div class="news-title">Women in Science Awards</div>
+                    <p class="news-excerpt">Celebrating our top female researchers who have made significant
+                        contributions to agricultural science.</p>
+                    <a href="/student.html" class="feature-link">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Partners -->
+    <section class="partners">
+        <h2 class="section-title">Our Partners</h2>
+        <div class="partners-grid">
+            <div class="partner-logo">KALRO</div>
+            <div class="partner-logo">Ministry of Agriculture</div>
+            <div class="partner-logo">FAO</div>
+            <div class="partner-logo">AgriBusiness Kenya</div>
+            <div class="partner-logo">World Bank</div>
+        </div>
+    </section>
+
+    <section class="stats-stripe">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h2>5+</h2>
+                <p>Departments</p>
+            </div>
+            <div class="stat-item">
+                <h2>50+</h2>
+                <p>Academic Staff</p>
+            </div>
+            <div class="stat-item">
+                <h2>2000+</h2>
+                <p>Alumni</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <footer>
+            <div class="foa-f-identity">
+                <h3>Faculty Of Agriculture</h3>
+                <p class="tagline"><span>Nurturing Minds, Feeding Nations</span></p>
+            </div>
+            <div class="footer-quicklink">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/programs.html">Programs</a></li>
+                    <li><a href="/staff.html">Staff Directory</a></li>
+                    <li><a href="/research.html">Research & Innovations</a></li>
+                    <li><a href="/contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-info">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>536 - Egerton University</li><br>
+                    <li>+254722651888</li><br>
+                    <li>foa@egerton.ac.ke</li>
+                </ul>
+
+            </div>
+
+        </footer>
+    </section>
+
+    <script src="/script.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.undercolor').classList.add('active');
+
+            // Hero Slider Logic
+            const hero = document.getElementById('heroSlider');
+            const images = [
+                '/img/faculty_sign.png', // New First Image
+                '/img/home-bg.jpg',
+                '/img/healthy-crops.jpg',
+                '/img/Annual Agriculture Innovation Fair.jpg',
+                '/img/foa-about-pic2.svg'
+            ];
+
+            let currentImageIndex = 0;
+
+            // Set initial image
+            hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[0]}')`;
+
+            // Preload images to prevent flickering
+            images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+
+            setInterval(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[currentImageIndex]}')`;
+            }, 5000); // Change every 5 seconds
+        });
+    </script>
+</body>
+
+</html>
