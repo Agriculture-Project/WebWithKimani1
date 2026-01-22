@@ -1,52 +1,75 @@
-.title{
+/* Basic reset for this component */
+.title {
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
-form{
-    display: inline-block;
-    position: absolute;
-    left: 40%;
+
+/* Card-like container logic handled by structure, but adding styling here */
+.login-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
-form label, form input{
-    display: block;
+
+.login-title h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
 }
-@media (max-width:900px) {
-    form{
-        display: inline-block;
-        position: absolute;
-        left: 20%;
-        top: 10em;
-        align-items: center;
-        
-    }
-    .title{
-        display: none;
-    }
-    .login-title h3{
-        text-align: center;
-        position: absolute;
-        left: 30%;
-        top: 120px;
-    }
-    .data-area{
-        background-color: rgba(36, 119, 187, 0.808);
-        width: 100px;
-        height: auto;
-    }
-    .submit-button{
-        color: #fff;
-        background-color: rgb(23, 160, 214);
-        border-radius: 8px;
-        width: 220px;
-        height: 35px;
-        cursor: pointer;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    form input{
-        padding-left: 10px;
-        margin: 10px;
-        border-radius: 5px;
-        padding: 5px;
-        width: 200px;
+
+.data-area {
+    background-color: rgba(36, 119, 187, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    /* Limit width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* Full width of container */
+    box-sizing: border-box;
+    /* padding included in width */
+}
+
+.submit-button {
+    color: #fff;
+    background-color: rgb(23, 160, 214);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: rgb(18, 126, 168);
+}
+
+@media (max-width: 900px) {
+    .data-area {
+        width: 90%;
+        margin: 0 auto;
     }
 }

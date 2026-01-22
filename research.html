@@ -8,6 +8,7 @@
     <link rel="icon" href="/img/Green Modern Agriculture Logo Design.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="research.css">
     <title>Research - Faculty of Agriculture</title>
 
@@ -16,27 +17,24 @@
 <body>
     <header>
         <nav>
-            <a class="nav-logo" href=""><img src="/img/Green Modern Agriculture Logo.jpg" alt=""></a>
+            <a class="nav-logo" href="/index.html"><img src="/img/Green Modern Agriculture Logo.jpg" alt=""></a>
             <img class="menu-btn" src="/img/menu.png" alt="">
             <div class="title">
                 <h1>Faculty of Agriculture</h1>
-                <!-- <p class="slogan" style="font-style: italic;">Nurturing Minds, Feeding Nations</p> -->
             </div>
             <ul>
-                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                <div class="">
+                <li><a href="/index.html"><i class="fa fa-home"></i> Home</a></li>
+                <div class="about-click">
                     <li><a href="/about.html"><i class="fa fa-info-circle"></i> About</a></li>
                 </div>
-                <li><a href=""><i class="fa fa-book-open"></i> Programs</a></li>
+                <li><a href="/programs.html"><i class="fa fa-book-open"></i> Programs</a></li>
                 <li><a href="/research.html"><i class="fa fa-lightbulb"></i> Research</a></li>
                 <li><a href="/staff.html"><i class="fa fa-users"></i> Staffs</a></li>
-                <li><a href="#"><i class="fa fa-user-graduate"></i> Student</a></li>
-                <li><a href="#"><i class="fa fa-blog"></i> Blogs</a></li>
-                <li><a href="/contact-us.html"><i class="fa fa-envelope"></i> Contact</a></li>
-                <li><a href="#"><i class="fa fa-pen-nib"></i> Authors</a></li>
-        
+                <li><a href="/student.html"><i class="fa fa-user-graduate"></i> Student</a></li>
+                <li><a href="/news-events.html"><i class="fa fa-newspaper"></i> News & Events</a></li><li><a href="/contact-us.html"><i class="fa fa-envelope"></i> Contact</a></li>
+
             </ul>
-        
+
         </nav>
         <div class="undercolor"></div>
     </header>
@@ -330,22 +328,41 @@
         </section>
     </main>
 
-    <script>
-        const menuBtn = document.querySelector('.menu-btn');
-        const navList = document.querySelector('nav ul');
+    <section id="footer">
+        <footer>
+            <div class="foa-f-identity">
+                <h3>Faculty Of Agriculture</h3>
+                <p class="tagline"><span>Nurturing Minds, Feeding Nations</span></p>
+            </div>
+            <div class="footer-quicklink">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/index.html">Programs</a></li>
+                    <li><a href="/index.html">Staff Directory</a></li>
+                    <li><a href="/index.html">Research & Innovations</a></li>
+                    <li><a href="/index.html">Blogs</a></li>
+                    <li><a href="/contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-info">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>536 - Egerton University</li><br>
+                    <li>+254722651888</li><br>
+                    <li>foa@egerton.ac.ke</li>
+                </ul>
 
-        menuBtn.addEventListener('click', () => {
-            navList.classList.toggle('show-menu')
-        });
-    </script>
+            </div>
+
+        </footer>
+    </section>
+
+    <script src="/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
 </body>
-    <script>
-        window.onload = function () {
-            document.querySelector('.undercolor').classList.add('active');
-        }
-    </script>
+
 </html>

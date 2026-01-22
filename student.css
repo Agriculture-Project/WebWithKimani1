@@ -1,0 +1,357 @@
+
+body {
+  padding-top: 100px;
+  
+}
+
+
+.section {
+  display: block;
+  
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  scroll-margin-top: 180px;
+ 
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #00a651;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.section p {
+  max-width: 100%;
+}
+
+
+.student-subnav {
+  position: fixed;
+  
+  top: 95px;
+  
+  left: 0;
+  width: 100%;
+  background: #008744;
+  z-index: 900;
+  padding: 10px 0;
+  border-bottom: 4px solid #006b35;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  margin-top: 80px;
+ max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.student-subnav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.student-subnav a:hover,
+.student-subnav a.active {
+  background-color: #ffd700;
+  /* Gold for active/hover */
+  color: #004d00;
+  /* Dark green text */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #ffd700;
+}
+
+.events-grid,
+.campus-grid,
+.scholarship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.club-card {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 240px;
+  background: #f9fbf9;
+  border-radius: 0.9rem;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.club-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.club-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.7rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.club-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.club-card span {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: #e4f3e4;
+  color: #145e14;
+  margin-bottom: 0.2rem;
+}
+
+.club-card p {
+  font-size: 0.88rem;
+}
+
+.club-filter {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.club-filter label {
+  font-size: 0.9rem;
+}
+
+.club-filter select {
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #c7d9c7;
+  font-size: 0.9rem;
+}
+
+.club-highlight {
+  outline: 2px solid #2ecc71;
+}
+
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.research-card {
+  background: #f7fafc;
+  border-radius: 0.9rem;
+  padding: 0.9rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.research-card img {
+  width: 100%;
+  height: 120px;
+  border-radius: 0.7rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.research-card h3 {
+  font-size: 1rem;
+}
+
+.research-meta {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.btn-small {
+  align-self: flex-start;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: none;
+  background: #145e14;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.btn-small:hover {
+  background: #1f7a1f;
+}
+
+.internships-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.internship-item {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 260px;
+  background: #f9fafb;
+  border-radius: 0.9rem;
+  padding: 0.9rem;
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.internship-icon {
+  font-size: 1.6rem;
+}
+
+.internship-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.internship-item p {
+  font-size: 0.88rem;
+}
+
+.internship-tips-btn {
+  margin-top: 1rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #3498db;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.internship-tips-btn:hover {
+  background: #2d80b7;
+}
+
+.internship-tips {
+  margin-top: 0.75rem;
+  background: #e8f3ff;
+  border-radius: 0.8rem;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  display: none;
+}
+
+/* Form Styles */
+.form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.form-container h3 {
+  margin-bottom: 1.5rem;
+  color: #145e14;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #145e14;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(20, 94, 20, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  background: #145e14;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #1f7a1f;
+}
+
+/* Responsive Adjustments for Content */
+@media (max-width: 900px) {
+  .club-card {
+    flex: 1 1 100%;
+  }
+
+  .research-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .internship-item {
+    flex: 1 1 100%;
+  }
+
+  .student-subnav {
+    top: 80px;
+    /* Adjust if mobile header height differs */
+    padding: 10px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1150px) {
+  .research-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
