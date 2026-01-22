@@ -1,15 +1,13 @@
-/* Responsive About Page Styles - Revamped */
 
-/* Ensure body has space for fixed header */
 body {
     padding-top: 100px;
     background-color: #f9fdf9;
-    /* Very light green hint */
+   
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #444;
 }
 
-/* Sections Container */
+
 #about-section,
 #body-section,
 #mission-vision,
@@ -18,15 +16,15 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto 60px;
-    /* More breathing room */
+    
     height: auto;
 }
 
-/* About Section Header */
+
 #about-section h2 {
     font-size: 2.5rem;
     color: #00a651;
-    /* Official Green */
+    
     margin-bottom: 2rem;
     text-align: center;
     position: relative;
@@ -39,17 +37,17 @@ body {
     width: 80px;
     height: 4px;
     background: #FFC107;
-    /* Gold accent */
+    
     margin: 10px auto 0;
     border-radius: 2px;
 }
 
 .about-section-bottom {
     display: none;
-    /* Replaced by pseudo-element above */
+    
 }
 
-/* About Content Grid */
+
 .abt-hist {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -59,10 +57,10 @@ body {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    /* Premium shadow */
+   
 }
 
-/* Slideshow Container */
+
 .intro-imgs {
     position: relative;
     width: 100%;
@@ -85,7 +83,7 @@ body {
     opacity: 1;
 }
 
-/* History Text */
+
 .abt-hist-lship {
     padding: 10px;
 }
@@ -116,19 +114,18 @@ a.readmore:hover {
     border-bottom-color: #00a651;
 }
 
-/* Dean's Message */
 #body-section {
     background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    /* Deeper shadow */
+   
     padding: 60px;
     position: relative;
     overflow: hidden;
     border: 1px solid #e1e1e1;
 }
 
-/* Decorative quote icon */
+* Decorative quote icon */
 #body-section::before {
     content: '\201C';
     position: absolute;
@@ -171,7 +168,7 @@ a.readmore:hover {
     line-height: 1.8;
     color: #444;
     font-style: italic;
-    /* Quote style */
+    
 }
 
 .dean-name {
@@ -180,12 +177,12 @@ a.readmore:hover {
     font-weight: 800;
     font-size: 1.2rem;
     color: #00a651 !important;
-    /* Force green override */
+    
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Mission & Vision Section */
+
 #mission-vision {
     display: flex;
     gap: 30px;
@@ -223,7 +220,7 @@ a.readmore:hover {
     color: #666;
 }
 
-/* Helper hidden classes */
+
 .abt-hist-intro,
 .abt-hist-history,
 .abt-hist-value,
@@ -237,10 +234,10 @@ a.readmore:hover {
 .mission-breaker,
 .mission-vision-breaker {
     display: none;
-    /* Hide placeholder/unused divs */
+    
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 900px) {
     .abt-hist {
         grid-template-columns: 1fr;

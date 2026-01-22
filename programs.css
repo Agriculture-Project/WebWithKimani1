@@ -1,6 +1,4 @@
-/* Programs Page Styles */
 
-/* Main Container for content to avoid overlap with fixed header */
 main {
     margin-top: 100px;
     padding: 2rem;
@@ -9,7 +7,7 @@ main {
     margin-right: auto;
 }
 
-/* Hero/Intro Section */
+
 .programs-intro {
     text-align: center;
     margin-bottom: 3rem;
@@ -29,7 +27,7 @@ main {
     line-height: 1.6;
 }
 
-/* Programs Categories (e.g., Undergraduate, Postgraduate) */
+
 .program-category {
     margin-bottom: 4rem;
 }
@@ -43,14 +41,14 @@ main {
     margin-bottom: 2rem;
 }
 
-/* Grid Layout for Program Cards */
+
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-/* Individual Program Card */
+
 .program-card {
     background-color: #fff;
     border-radius: 10px;
@@ -72,7 +70,7 @@ main {
     height: 200px;
     object-fit: cover;
     background-color: #e0e0e0;
-    /* Placeholder color */
+    
 }
 
 .program-details {
@@ -121,7 +119,7 @@ main {
     background-color: #008c44;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     main {
         padding: 1rem;

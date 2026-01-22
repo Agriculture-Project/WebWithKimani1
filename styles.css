@@ -321,113 +321,84 @@ h1.page-title {
     }
 }
 
-/* Responsive styles */
-/* Responsive styles */
+
 @media (max-width: 900px) {
     .menu-btn {
         display: block;
         width: 35px;
-        /* Slightly smaller, more standard size */
         position: absolute;
         right: 20px;
         top: 25px;
-        /* Align with header vertical center */
         cursor: pointer;
         z-index: 1002;
-        /* Above the menu */
         transition: transform 0.3s ease;
     }
 
-    /* Optional: Rotate/animate menu button if we had a class on it. 
-       For now, we rely on the drawer animation. */
 
     nav {
-        /* Reset nav container to not expand */
         height: 80px;
         padding: 0 10px;
-        /* Reduced padding */
         width: 100%;
         box-sizing: border-box;
         justify-content: flex-start;
-        /* Align start */
         align-items: center;
-        /* Vertically center */
         display: flex;
         flex-direction: row;
-        /* Ensure row layout */
     }
 
     nav .nav-logo {
         display: block;
-        /* Show logo */
         margin-right: 10px;
     }
 
     nav .nav-logo img {
         width: 60px;
-        /* Mobile logo size */
         height: auto;
         margin: 0;
-        /* Reset margins */
         border-radius: 50%;
-        /* Optional: round if it looks better, matches staff images style */
     }
 
     .title {
         margin: 0;
         text-align: left;
         position: static;
-        /* Let it flow in flexbox */
     }
 
     .title h1 {
         font-size: 1.1rem;
-        /* Slightly smaller to fit */
         width: auto;
         margin: 0;
         padding: 0;
         line-height: 1.2;
     }
 
-    /* The Side Drawer */
     nav ul {
         display: flex;
-        /* Always flex, just hidden off-screen */
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         position: fixed;
         top: 0;
         right: -320px;
-        /* Hide off-screen */
         width: 280px;
-        /* Fixed width drawer */
         height: 100vh;
         background: rgba(255, 255, 255, 0.95);
-        /* White glass */
         backdrop-filter: blur(10px);
         padding: 100px 30px 40px 30px;
-        /* Top padding clears the close area */
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
-        /* Soft shadow */
         transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        /* Smooth ease-out */
         z-index: 1001;
         gap: 0;
-        /* Clear gap */
         overflow-y: auto;
-        /* Scrollable if long */
     }
 
     nav ul.show-menu {
         right: 0;
     }
 
-    /* Styles for list items in drawer */
     nav ul li {
         width: 100%;
         display: block;
-        /* Always visible in drawer */
         margin-bottom: 15px;
         opacity: 0;
         transform: translateX(20px);
@@ -436,7 +407,6 @@ h1.page-title {
 
     .about-click {
         width: 100%;
-        /* Fix for the div wrapping li */
     }
 
     nav ul li a {
@@ -456,7 +426,6 @@ h1.page-title {
         margin-right: 15px;
         font-size: 1.2rem;
         width: 25px;
-        /* Fixed width for icon alignment */
         text-align: center;
         color: #00a651;
     }
@@ -464,12 +433,10 @@ h1.page-title {
     nav ul li a:hover,
     nav ul li a.active {
         background-color: rgba(0, 166, 81, 0.1);
-        /* Light green tint */
         color: #00a651;
         transform: translateX(5px);
     }
 
-    /* Staggered animation for list items when menu opens */
     nav ul.show-menu li {
         opacity: 1;
         transform: translateX(0);
@@ -511,16 +478,13 @@ h1.page-title {
         transition-delay: 0.50s;
     }
 
-    /* Handle the div wrapper delay */
     nav ul.show-menu div.about-click li {
         transition-delay: 0.22s;
     }
 
 
-    /* Content Adjustments */
     .container {
         margin-top: 100px;
-        /* Reduced margin since nav isn't expanding */
         padding: 15px;
     }
 
@@ -579,9 +543,7 @@ footer {
 }
 
 .foa-f-identity img {
-    /* Assuming there's an image in identity */
     display: none;
-    /* Hide if not needed or style properly */
 }
 
 .footer-quicklink h3,

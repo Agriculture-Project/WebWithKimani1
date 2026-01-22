@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/styles.css">
     <style>
-        /* Home Page Specific Styles */
         .home-hero {
             height: 90vh;
-            /* Default background if JS fails */
             background-color: #208a2e;
             background-size: cover;
             background-position: center;
@@ -27,7 +25,6 @@
             transition: background-image 1s ease-in-out;
         }
 
-        /* Overlay to ensure text readability */
         .home-hero::before {
             content: '';
             position: absolute;
@@ -45,7 +42,6 @@
             animation: moveUp 1s ease-out;
             position: relative;
             z-index: 2;
-            /* Above overlay */
         }
 
         .hero-content h1 {
@@ -127,7 +123,6 @@
             font-weight: bold;
         }
 
-        /* New Section: Latest News */
         .latest-news {
             background-color: #f9f9f9;
             padding: 60px 20px;
@@ -423,10 +418,10 @@
         window.addEventListener('load', function () {
             document.querySelector('.undercolor').classList.add('active');
 
-            // Hero Slider Logic
+            
             const hero = document.getElementById('heroSlider');
             const images = [
-                '/img/faculty_sign.png', // New First Image
+                '/img/faculty_sign.png', 
                 '/img/home-bg.jpg',
                 '/img/healthy-crops.jpg',
                 '/img/Annual Agriculture Innovation Fair.jpg',
@@ -435,10 +430,8 @@
 
             let currentImageIndex = 0;
 
-            // Set initial image
             hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[0]}')`;
 
-            // Preload images to prevent flickering
             images.forEach(src => {
                 const img = new Image();
                 img.src = src;
@@ -447,7 +440,7 @@
             setInterval(() => {
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[currentImageIndex]}')`;
-            }, 5000); // Change every 5 seconds
+            }, 5000); 
         });
     </script>
 </body>

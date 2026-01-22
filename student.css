@@ -1,24 +1,20 @@
-/* Student Page Specific Styles */
 
-/* Ensure body has space for fixed header */
 body {
   padding-top: 100px;
-  /* Push everything down by default */
+  
 }
 
-/* Main Container handled below */
 
-/* Sections */
 .section {
   display: block;
-  /* Show sections by default */
+  
   background: #ffffff;
   padding: 2rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   scroll-margin-top: 180px;
-  /* Increase scroll offset for anchors (Header + Subnav) */
+ 
 }
 
 .section h2 {
@@ -33,12 +29,12 @@ body {
   max-width: 100%;
 }
 
-/* Student Sub-Navigation (Sticky > Fixed) */
+
 .student-subnav {
   position: fixed;
-  /* Force it to stay */
+  
   top: 95px;
-  /* Moved down to ensure it clears the header completely */
+  
   left: 0;
   width: 100%;
   background: #008744;
@@ -52,13 +48,9 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Add margin to main to account for the now-fixed subnav height (~70px) */
-/* Body already has 100px padding for header. */
-/* Total top space needed = Header (80px) + Subnav (~70px) + Spacing (20px) */
 main {
   margin-top: 80px;
-  /* Additional push for the subnav */
-  max-width: 1200px;
+ max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -67,15 +59,12 @@ main {
 .student-subnav a {
   text-decoration: none;
   color: #fff;
-  /* White text on green background */
   font-weight: 700;
   padding: 10px 20px;
   border-radius: 30px;
-  /* Pill shape */
   transition: all 0.3s ease;
   font-size: 0.95rem;
   background: rgba(255, 255, 255, 0.1);
-  /* Subtle background for links */
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -90,11 +79,9 @@ main {
   border-color: #ffd700;
 }
 
-/* Grid & Components from original CSS below... */
 .events-grid,
 .campus-grid,
 .scholarship-grid {
-  /* Retaining original grid logic */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
